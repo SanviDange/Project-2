@@ -1,0 +1,45 @@
+@import url("https://use.typekit.net/gwg5trg.css");
+
+
+:root {
+  --primary-colour: #141414;
+  --secondary-colour: #f9f9f9;
+  --colour: #d00202;
+
+  --display-font: "snell-roundhand-lt-std", sans-serif;
+  --primary-font: "helvetica-neue-lt-pro", sans-serif;
+}
+
+
+body {
+  background-color: var(--primary-colour);
+  color: var(--secondary-colour);
+  margin: 20px;
+  padding: 0;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: var(--display-font);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-shadow:
+    0 0 4px #f2e5eb,
+    0 0 10px #f2e5eb,
+    0 0 30px #f2e5eb,
+    0 0 80px rgba(255, 255, 255, 0.5);
+}
+
+h1 { font-size: 2.5rem;   margin-bottom: 1.5rem; }  /* ~40px */
+h2 { font-size: 2rem;     margin-bottom: 1.25rem; } /* ~32px */
+h3 { font-size: 1.75rem;  margin-bottom: 1rem; }    /* ~28px */
+h4 { font-size: 1.5rem;   margin-bottom: 1rem; }    /* ~24px */
+h5 { font-size: 1.25rem;  margin-bottom: 0.75rem; } /* ~20px */
+h6 { font-size: 1rem;     margin-bottom: 0.75rem; } /* ~16px */
+
+p {
+    font-family: var(--primary-font);
+    margin-bottom: 1.5rem;
+}
+
