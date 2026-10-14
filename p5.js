@@ -30,7 +30,7 @@ function draw() {
 
 // Outer, diffused glow
 for (let i = 70; i > 0; i -= 6) {
-  let alpha = map(i, 0, 80, 0, 2);
+  let alpha = map(i, 0, 80, 0, 30);
   fill(255, 242, 230, 1);
   circle(mouseX, mouseY, i * 2);
 }
@@ -94,8 +94,8 @@ display() {
   fill(255, 242, 230, this.opacity * 0.08);
   circle(this.posX, this.posY, this.size * 2);
 
-  // Light center
-  fill(255, 242, 230, this.opacity);
+  // Brighter cream center
+  fill(255, 242, 230);
   circle(this.posX, this.posY, this.size);
 }
 }
