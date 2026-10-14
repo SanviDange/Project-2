@@ -5,6 +5,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 
+   noCursor();
+
   // Create snowflakes after the canvas is initialized
   for (let i = 0; i < 40; i++) {
     snowflakes.push(new Snowflake());
@@ -24,6 +26,18 @@ function draw() {
   // Mouse-controlled circle
   fill(255, 242, 230);
   circle(mouseX, mouseY, 50);
+
+
+// Outer, diffused glow
+for (let i = 70; i > 0; i -= 6) {
+  let alpha = map(i, 0, 80, 0, 2);
+  fill(255, 242, 230, 1);
+  circle(mouseX, mouseY, i * 2);
+}
+
+// Bright center
+fill(255, 242, 230, 180);
+circle(mouseX, mouseY, 8);
 
   let currentTime = frameCount / 60;
 
@@ -76,14 +90,12 @@ class Snowflake {
 display() {
   noStroke();
 
-  // Very subtle, tight glow
-  for (let r = this.size * 1.3; r > this.size; r -= 2) {
-    fill(255, 242, 230, 6);
-    circle(this.posX, this.posY, r * 1);
-  }
+  // Soft outer glow
+  fill(255, 242, 230, this.opacity * 0.08);
+  circle(this.posX, this.posY, this.size * 2);
 
-  // Soft cream center
-  fill(255, 242, 230, 190);
+  // Light center
+  fill(255, 242, 230, this.opacity);
   circle(this.posX, this.posY, this.size);
 }
 }
