@@ -2,6 +2,13 @@ const openButton = document.getElementById("open-panel");
 const closeButton = document.getElementById("close-panel");
 const panel = document.getElementById("next-panel");
 
+window.addEventListener('load', () => {
+        const splashScreen = document.getElementById('splashScreen');
+        setTimeout(() => {
+            splashScreen.classList.add('hidden');
+        }, 6000); // Hides after 6 seconds
+    });
+
 openButton.addEventListener("click", () => {
     panel.inert = false;
     panel.setAttribute("aria-hidden", "false");
