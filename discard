@@ -1,0 +1,16 @@
+<div class="image-panel">
+    <button id="open-panel" aria-label="Open panel">↖</button>
+
+    <div class="panel-image">
+        <img src="images/exit.jpeg" alt="Illuminated exit sign">
+    </div>
+</div>
+
+<section id="next-panel" class="next-panel" aria-hidden="true" inert>
+    <button id="close-panel" class="back-arrow" aria-label="Go back">↖</button>
+
+    <div class="next-content">
+        <h1>Still Becoming</h1>
+        <p>Your content goes here.</p>
+    </div>
+</section>
