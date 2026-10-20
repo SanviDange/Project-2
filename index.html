@@ -6,12 +6,14 @@
     <title>Still Awake</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js" defer></script>
-    <script src="p5.js" defer></script>
-    <script src="script.js" defer></script>
-    <script src="sketch.js" defer></script>
+    <script src="p5_index.js" defer></script>
+    <script src="script_index.js" defer></script>
+    <script src="sketch_index.js" defer></script>
 </head>
 
 <body>
+    <!-- Splash Screen / Intro Motion -->
+
     <div class="splash" id="splashScreen">
         <video controls poster="thumbnail.jpg" autoplay muted loop>
         <source src="video/Still Awake.mp4" type="video/mp4">
@@ -19,9 +21,45 @@
         </video>
     </div>
 
-    <div id="sketch"></div>
+    <!-- Navigation -->
 
-<div class="content-box">
+    <nav class="navigation">
+    <a href="/still_becoming.html" class="nav-item">
+        <div class="nav-title">
+            <span class="sans">STILL</span>
+            <span class="script">Becoming</span>
+        </div>
+        <div class="nav-dots">
+            <span></span>
+        </div>
+    </a>
+
+    <a href="#on" class="nav-item">
+        <div class="nav-title">
+            <span class="sans">STILL</span>
+            <span class="script">On</span>
+        </div>
+        <div class="nav-dots">
+            <span></span>
+            <span></span>
+        </div>
+    </a>
+
+    <a href="#loud" class="nav-item">
+        <div class="nav-title">
+            <span class="sans">STILL</span>
+            <span class="script">Loud</span>
+        </div>
+        <div class="nav-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </a>
+</nav>
+
+<div id="sketch_index"></div>
+<div class="content-box"></div>
 </div>
 
 </body>

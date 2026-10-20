@@ -1,0 +1,143 @@
+@import url("https://use.typekit.net/gwg5trg.css");
+
+
+:root {
+  --primary-colour: #000000;
+  --secondary-colour: #f9f9f9;
+  --colour: #d00202;
+
+  --display-font: "snell-roundhand-lt-std", sans-serif;
+  --primary-font: "helvetica-neue-lt-pro", sans-serif;
+}
+
+
+body {
+  background-color: var(--primary-colour);
+  color: var(--secondary-colour);
+  margin: 20px 20px 20px 20px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: -1;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: var(--display-font);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-shadow:
+    0 0 4px #f2e5eb,
+    0 0 10px #f2e5eb,
+    0 0 30px #f2e5eb,
+    0 0 80px rgba(255, 255, 255, 0.5);
+}
+
+h1 { font-size: 4rem;   margin-bottom: 1.5rem; }  /* ~40px */
+h2 { font-size: 2rem;     margin-bottom: 1.25rem; } /* ~32px */
+h3 { font-size: 1.75rem;  margin-bottom: 1rem; }    /* ~28px */
+h4 { font-size: 1.5rem;   margin-bottom: 1rem; }    /* ~24px */
+h5 { font-size: 1.25rem;  margin-bottom: 0.75rem; } /* ~20px */
+h6 { font-size: 1rem;     margin-bottom: 0.75rem; } /* ~16px */
+
+p {
+    font-family: var(--primary-font);
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--secondary-colourcolour);
+    text-decoration: none;
+}
+
+.content-box {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: hug;
+  border: 3px solid #fafcf5;
+}
+
+.image-panel {
+    position: fixed;
+    right: 2.8%;
+    bottom: 3.5%;
+    width: 30%;
+    height: 52%;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background-color: var(--primary-colour);
+}
+
+#open-panel {
+    flex: 0 0 17%;
+    border: none;
+    border-bottom: 3px solid white;
+    background: transparent;
+    color: white;
+    font-size: 48px;
+    text-align: left;
+    padding-left: 18px;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+#open-panel:hover {
+    text-shadow: 0 0 15px white;
+}
+
+.panel-image {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.panel-image img {
+    max-width: 72%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 3px solid red;
+}
+
+/*///////////// SPLASH SCREEN ////////////*/
+
+.splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s ease;
+        z-index: 9999;
+    }
+    .splash-header {
+        color: white;
+        font-size: 30px;
+
+        font-family: var(--display-font);
+    }
+    .splash.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    
