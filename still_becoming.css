@@ -66,52 +66,7 @@ a {
   right: 0;
   width: hug;
   border: 3px solid #fafcf5;
-}
-
-.image-panel {
-    position: fixed;
-    right: 2.8%;
-    bottom: 3.5%;
-    width: 30%;
-    height: 52%;
-    border: 3px solid white;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    background-color: var(--primary-colour);
-}
-
-#open-panel {
-    flex: 0 0 17%;
-    border: none;
-    border-bottom: 3px solid white;
-    background: transparent;
-    color: white;
-    font-size: 48px;
-    text-align: left;
-    padding-left: 18px;
-    cursor: pointer;
-    transition: text-shadow 0.3s ease;
-}
-
-#open-panel:hover {
-    text-shadow: 0 0 15px white;
-}
-
-.panel-image {
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-}
-
-.panel-image img {
-    max-width: 72%;
-    max-height: 100%;
-    object-fit: contain;
-    border: 3px solid red;
+  z-index: 3;
 }
 
 /*///////////// SPLASH SCREEN ////////////*/
@@ -129,15 +84,127 @@ a {
         transition: opacity 0.5s ease;
         z-index: 9999;
     }
-    .splash-header {
-        color: white;
-        font-size: 30px;
+    
 
-        font-family: var(--display-font);
-    }
     .splash.hidden {
         opacity: 0;
         pointer-events: none;
     }
     
-    
+    /* ONLY THE BECOMING PAGE */
+
+
+/* ////// LOGO ////// */
+
+.site-logo {
+display: flex;
+width: 100vw;
+justify-content: space-between;
+align-items: flex-start;
+flex-shrink: 0;
+}
+
+.becoming-logo {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: -16px;
+    flex-shrink: 0;
+}
+
+.site-logo .still {
+color: #FFF;
+text-align: center;
+font-family: "Helvetica Neue";
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: 70%; /* 35px */
+}
+
+/* FLICKERING LOGO LIGHT */
+
+.becoming-light {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(220, 240, 255, 0.3);
+    animation: becoming-flicker 3s infinite;
+}
+
+@keyframes becoming-flicker {
+    0%, 15%, 18%, 55%, 100% {
+        opacity: 1;
+    }
+
+    16%, 17% {
+        opacity: 0.3;
+    }
+
+    65% {
+        opacity: 0.65;
+    }
+
+    68% {
+        opacity: 0.15;
+    }
+
+    72% {
+        opacity: 0.9;
+    }
+}
+
+/* ////// STORY TITLE ////// */
+
+.poem {
+    display: flex;
+width: 659px;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 30px;
+}
+
+.poem-title {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+
+color: #FFF;
+text-align: center;
+font-family: var(--display-font);
+font-size: 100px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+
+/* ////// BOTTOM IMAGE LAYOUT ////// */
+
+.image-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2%;
+    width: 50%;
+    margin: -50px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.image-layout img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+
