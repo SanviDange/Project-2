@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
         const splashScreen = document.getElementById('splashScreen');
         setTimeout(() => {
             splashScreen.classList.add('hidden');
-        }, 6000); // Hides after 6 seconds
+        }, 6000); // Hides after 3 seconds
     });
 
 openButton.addEventListener("click", () => {

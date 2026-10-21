@@ -3,12 +3,12 @@ var blob;
 var blobs = []; 
 
 function setup() {
-  createCanvas (windowWidth, windowHeight);
+  createCanvas (windowWidth, document.documentElement.scrollHeight);
 
   noCursor();
   
   blob = new Blob(width/2, height/2, 64);
-  for (var i = 0; i < 20; i++)  {
+  for (var i = 0; i < 30; i++)  {
     blobs [i] = new Blob (random(width), random(height), (16));
   }
 }
