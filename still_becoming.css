@@ -36,11 +36,6 @@ h1, h2, h3, h4 {
     line-height: 1.2;
     margin-bottom: 1rem;
     font-weight: 400;
-    text-shadow:
-    0 0 4px #f2e5eb,
-    0 0 10px #f2e5eb,
-    0 0 30px #f2e5eb,
-    0 0 80px rgba(255, 255, 255, 0.5);
 }
 
 h1 { font-size: 4rem;   margin-bottom: 1.5rem; }  /* ~40px */
@@ -60,13 +55,14 @@ a {
     text-decoration: none;
 }
 
-.content-box {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: hug;
-  border: 3px solid #fafcf5;
-  z-index: 3;
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    pointer-events: none;
 }
 
 /*///////////// SPLASH SCREEN ////////////*/
@@ -176,7 +172,7 @@ align-items: center;
 gap: 10px;
 align-self: stretch;
 
-color: #FFF;
+color: #000000;
 text-align: center;
 font-family: var(--display-font);
 font-size: 100px;
@@ -185,6 +181,18 @@ font-weight: 500;
 line-height: normal;
 }
 
+.poem-text {
+width: 412px;
+height: 329px;
+flex-shrink: 0;
+
+color: #000000;
+font-family: "Helvetica Neue";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 
 
 /* ////// BOTTOM IMAGE LAYOUT ////// */

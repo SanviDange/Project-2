@@ -36,11 +36,6 @@ h1, h2, h3, h4 {
     line-height: 1.2;
     margin-bottom: 1rem;
     font-weight: 400;
-    text-shadow:
-    0 0 4px #f2e5eb,
-    0 0 10px #f2e5eb,
-    0 0 30px #f2e5eb,
-    0 0 80px rgba(255, 255, 255, 0.5);
 }
 
 h1 { font-size: 4rem;   margin-bottom: 1.5rem; }  /* ~40px */
@@ -141,9 +136,9 @@ a {
 
 /*///////////// NAVIGATION ////////////*/
 
-navigation {
+.navigation {
     display: inline-flex;
-    height: 832px;
+    height: 100vh;
     padding: 329px 53px 353px 46px;
     align-items: center;
 }
