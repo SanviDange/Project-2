@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still Becoming</title>
+    <link rel="stylesheet" href="https://use.typekit.net/gwg5trg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset browser defaults so the page matches Figma */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, p {
+            margin: 0;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+
+        :root {
+            --primary-colour: #000000;
+            --secondary-colour: #ffffff;
+
+            --display-font: "snell-roundhand-lt-std", "Snell Roundhand", cursive;
+            --primary-font: "helvetica-neue-lt-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --heading-font: "Otomanopee One", sans-serif;
+
+            /* 1 Figma pixel: the 1280px frame always fills the window width */
+            --u: calc(100vw / 1280);
+        }
+
+        html,
+        body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--primary-colour);
+            color: var(--secondary-colour);
+            margin: 0;
+            font-family: var(--primary-font);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* Page is the full window width; anything hanging off the edges is clipped */
+        .page {
+            position: relative;
+            width: 100vw;
+            max-width: 100%;
+            overflow: hidden;
+            padding-bottom: calc(600 * var(--u));
+        }
+
+        /* ////// HEADER ////// */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: calc(1210 * var(--u));
+            max-width: calc(100% - calc(62 * var(--u)));
+            margin: calc(55 * var(--u)) 0 0 calc(31 * var(--u));
+        }
+
+        .site-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(303 * var(--u));
+        }
+
+        .logo-still {
+            font-family: var(--primary-font);
+            font-size: calc(50 * var(--u));
+            line-height: 0.7;
+            height: calc(35 * var(--u));
+            margin-bottom: calc(-16 * var(--u));
+        }
+
+        .logo-becoming {
+            font-family: var(--display-font);
+            font-style: italic;
+            font-size: calc(80 * var(--u));
+            line-height: 0.7;
+            height: calc(56 * var(--u));
+        }
+
+        .header-icon {
+            width: calc(50 * var(--u));
+            height: calc(50 * var(--u));
+        }
+
+        /* ////// SHARED: title / author / year / genre ////// */
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: calc(97 * var(--u));
+            width: 100%;
+        }
+
+        .meta-col {
+            display: flex;
+            flex-direction: column;
+            gap: calc(9 * var(--u));
+            width: calc(309 * var(--u));
+        }
+
+        .meta-col p {
+            font-size: calc(16 * var(--u));
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* ////// POEM: What I reined for ////// */
+
+        .poem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(73 * var(--u));
+            width: calc(1169 * var(--u));
+            max-width: 100%;
+            margin: calc(108 * var(--u)) auto 0;
+        }
+
+        .poem-heading {
+            display: flex;
+            flex-direction: column;
+            gap: calc(36 * var(--u));
+            width: 100%;
+        }
+
+        .poem-title {
+            font-family: var(--display-font);
+            font-style: italic;
+            font-size: calc(120 * var(--u));
+            text-align: center;
+        }
+
+        .poem-text {
+            width: calc(571 * var(--u));
+            font-size: calc(24 * var(--u));
+            line-height: normal;
+            text-align: center;
+        }
+
+        /* Walk / trot / run horse cutouts */
+        .horses {
+            display: flex;
+            align-items: center;
+            gap: calc(26 * var(--u));
+            width: 100%;
+        }
+
+        .horse {
+            position: relative;
+            height: calc(378 * var(--u));
+            flex-shrink: 0;
+        }
+
+        .horse img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .horse-walk { width: calc(309 * var(--u)); }
+        .horse-trot { width: calc(370 * var(--u)); }
+        .horse-run  { width: calc(438 * var(--u)); }
+
+        /* ////// CLOCKS: "I like the late hours" ////// */
+
+        .clocks {
+            position: relative;
+            height: calc(1176 * var(--u));
+            margin-top: calc(61 * var(--u));
+        }
+
+        .clock {
+            position: absolute;
+            width: calc(536 * var(--u));
+            height: calc(547 * var(--u));
+            overflow: hidden;
+        }
+
+        .clock img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Positions taken from the Figma frame, relative to this section */
+        .clock-1 { left: calc(705 * var(--u)); top: 0; }
+        .clock-2 { left: calc(6 * var(--u));   top: calc(117 * var(--u)); }
+        .clock-3 { left: calc(597 * var(--u)); top: calc(282 * var(--u)); }
+        .clock-4 { left: calc(239 * var(--u)); top: calc(391 * var(--u)); }
+        .clock-5 { left: calc(-57 * var(--u)); top: calc(594 * var(--u)); }
+        .clock-6 { left: calc(789 * var(--u)); top: calc(629 * var(--u)); }
+
+        .clocks-quote {
+            position: absolute;
+            left: 50%;
+            top: calc(404 * var(--u));
+            transform: translateX(-50%);
+            width: calc(1059 * var(--u));
+            font-family: var(--display-font);
+            font-style: italic;
+            font-size: calc(130 * var(--u));
+            line-height: 1.05;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .divider {
+            position: absolute;
+            left: 50%;
+            width: calc(531 * var(--u));
+            height: 0;
+            border-top: 1px solid var(--secondary-colour);
+            transform: translateX(-50%) rotate(-0.43deg);
+            z-index: 1;
+        }
+
+        .divider-top    { top: calc(81 * var(--u)); }
+        .divider-bottom { top: calc(1112 * var(--u)); }
+
+        /* ////// STORY: Playing for nobody but me ////// */
+
+        .story {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(33 * var(--u));
+            width: calc(1130 * var(--u));
+            max-width: 100%;
+            margin: calc(33 * var(--u)) auto 0;
+        }
+
+        .story-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(45 * var(--u));
+            width: calc(740 * var(--u));
+            max-width: 100%;
+        }
+
+        .story-title {
+            font-family: var(--heading-font);
+            font-size: calc(80 * var(--u));
+            line-height: 1.05;
+            text-align: center;
+        }
+
+        .story .meta {
+            width: auto;
+        }
+
+        .story-columns {
+            display: flex;
+            align-items: flex-start;
+            gap: calc(55 * var(--u));
+            width: 100%;
+        }
+
+        .story-col {
+            width: calc(340 * var(--u));
+            flex-shrink: 0;
+            font-size: calc(20 * var(--u));
+            line-height: 1.05;
+            text-align: justify;
+        }
+
+        .story-col p + p {
+            margin-top: calc(21 * var(--u));
+        }
+
+        /* ////// SPOTLIGHT: quote, read more, photos ////// */
+
+        .spotlight {
+            position: relative;
+            height: calc(1603 * var(--u));
+            margin-top: calc(60 * var(--u));
+        }
+
+        .spotlight-bg {
+            position: absolute;
+            left: calc(-99 * var(--u));
+            top: 0;
+            width: calc(709 * var(--u));
+            height: calc(1063 * var(--u));
+            object-fit: cover;
+            transform: scaleX(-1);
+        }
+
+        .spotlight-quote {
+            position: absolute;
+            left: calc(256 * var(--u));
+            top: calc(270 * var(--u));
+            width: calc(540 * var(--u));
+            font-family: var(--display-font);
+            font-style: italic;
+            font-size: calc(50 * var(--u));
+            line-height: 1.05;
+        }
+
+        .read-more-list {
+            position: absolute;
+            left: calc(851 * var(--u));
+            top: calc(402 * var(--u));
+            display: flex;
+            flex-direction: column;
+            gap: calc(119 * var(--u));
+            width: calc(340 * var(--u));
+        }
+
+        .read-more {
+            display: flex;
+            align-items: center;
+            gap: calc(10 * var(--u));
+            color: var(--secondary-colour);
+            font-style: italic;
+            font-size: calc(24 * var(--u));
+            line-height: 1.05;
+            text-decoration: none;
+        }
+
+        .read-more img {
+            width: calc(16 * var(--u));
+            height: calc(15 * var(--u));
+        }
+
+        .photo {
+            position: absolute;
+            object-fit: cover;
+        }
+
+        .photo-circle-lights { left: calc(66 * var(--u));  top: calc(1036 * var(--u)); width: calc(379 * var(--u)); height: calc(567 * var(--u)); }
+        .photo-night-light   { left: calc(445 * var(--u)); top: calc(1063 * var(--u)); width: calc(360 * var(--u)); height: calc(540 * var(--u)); }
+        .photo-11            { left: calc(851 * var(--u)); top: calc(1031 * var(--u)); width: calc(381 * var(--u)); height: calc(572 * var(--u)); }
+    </style>
+</head>
+
+<body>
+<div class="page">
+
+    <header>
+        <div class="site-logo">
+            <h2 class="logo-still">STILL</h2>
+            <h2 class="logo-becoming">Becoming</h2>
+        </div>
+        <!-- Header icon (Figma: Frame 12) -->
+        <img class="header-icon" src="#" alt="">
+    </header>
+
+    <main>
+        <!-- ////// POEM ////// -->
+        <section class="poem">
+            <div class="poem-heading">
+                <h1 class="poem-title">What I reined for</h1>
+                <div class="meta">
+                    <div class="meta-col">
+                        <p>Title: What I reined for</p>
+                        <p>Author: Nilesh Dange</p>
+                    </div>
+                    <div class="meta-col">
+                        <p>Publication year: 2026</p>
+                        <p>Genre: Poem</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="poem-text">
+                In darkness emerges a ray of hope,<br>
+                I start with a trot and then gallop,<br>
+                Following the light, I reach the hilltop,<br>
+                Beneath twinkling lights, I cherish<br>
+                every dewdrop.<br>
+                <br>
+                I am the rider I longed to see,<br>
+                It’s no longer just a wish in me,<br>
+                The dream I held is come to be.
+            </p>
+
+            <!-- Horse cutouts: connect images + motion here -->
+            <div class="horses">
+                <div class="horse horse-walk"><img src="#" alt="Walking horse and rider"></div>
+                <div class="horse horse-trot"><img src="#" alt="Trotting horse and rider"></div>
+                <div class="horse horse-run"><img src="#" alt="Galloping horse and rider"></div>
+            </div>
+        </section>
+
+        <!-- ////// CLOCKS ////// -->
+        <section class="clocks">
+            <div class="divider divider-top"></div>
+
+            <!-- Clocks: connect clock face + minute-hand motion here -->
+            <div class="clock clock-1"><img src="#" alt=""></div>
+            <div class="clock clock-2"><img src="#" alt=""></div>
+            <div class="clock clock-3"><img src="#" alt=""></div>
+            <div class="clock clock-4"><img src="#" alt=""></div>
+            <div class="clock clock-5"><img src="#" alt=""></div>
+            <div class="clock clock-6"><img src="#" alt=""></div>
+
+            <p class="clocks-quote">“I like the late hours,<br>that’s when the world lets you work”</p>
+
+            <div class="divider divider-bottom"></div>
+        </section>
+
+        <!-- ////// STORY ////// -->
+        <section class="story">
+            <div class="story-heading">
+                <h2 class="story-title">PLAYING FOR NOBODY BUT ME</h2>
+                <div class="meta">
+                    <div class="meta-col">
+                        <p>Title: Playing for nobody but me</p>
+                        <p>Author: Jessica Lambert</p>
+                    </div>
+                    <div class="meta-col">
+                        <p>Publication year: 2002</p>
+                        <p>Genre: Excerpt</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-columns">
+                <div class="story-col">
+                    <p>The clock on the backstage wall ticked past three in the morning, its pale face barely visible in the dim hall. Outside, the city was buried under frost and silence, the kind that swallows sound before it even reaches the window. But inside the empty theater, Maya stood at the edge of the dark stage. Her fingers were cold, stiff from hours of waiting around for a moment like this one. She hadn’t come here to sleep. She’d come to take the one thing the day never gave her — time nobody else was using.</p>
+                    <p>She crossed to the switchboard and threw a single lever. High in the rafters, a tungsten bulb buzzed to life, dropping a hard, narrow cone of light straight onto the grand piano. Everything outside that circle disappeared at once — the empty rows of red velvet seats, the balconies, the shadows crowding the wings. All of it gone, swallowed whole. The spotlight didn’t just light the piano. It cut the room in half, and left her alone with the only part of it that mattered.</p>
+                </div>
+                <div class="story-col">
+                    <p>She stepped into the light and sat down at the bench. When her hands finally touched the ivory, the exhaustion that had sat on her shoulders all day let go, all at once, like something had finally been given permission to leave. In its place came something else — restless, hungry, wide awake. She didn’t need anyone in those seats to make this worth doing. The silence of an empty theater at three in the morning was the only kind of listening she’d ever fully trusted.</p>
+                    <p>Her hands found the first chord before she’d even decided to play it. The sound filled the dark room and came back to her off the balconies, off the velvet, off walls that hadn’t heard music in hours — and for the first time all day, nobody was waiting for her to be anything other than exactly this.</p>
+                    <p>She played without thinking about what came next, just letting her hands move where they wanted. A scale that bent into something else. A chord held too long, then let go. Nobody was grading this.</p>
+                </div>
+                <div class="story-col">
+                    <p>Somewhere past midnight she’d stopped being tired in the way that made her want to quit, and started being tired in the way that made everything feel closer to the surface — every note landing a little harder than it needed to, every silence between phrases stretching out just a beat longer than it should have. She didn’t fight it. She let the hour do whatever it wanted to her hands.</p>
+                    <p>At some point she noticed she was crying, and didn’t stop playing to figure out why. It didn’t feel like sadness exactly. It felt more like something finally being let out after being held too carefully for too long — the way a held breath doesn’t feel like relief until you’ve already let it go. She kept both hands moving and let her face do whatever it needed to do.</p>
+                    <p>The bulb above her flickered once, dimmed, then steadied again. She barely noticed. Outside, morning was still hours away, and the seats were still empty, and none of it mattered. She played until her hands ached and her back ached and even then she didn’t stop, because stopping had never been the plan — not tonight, not at three in the morning, not with the whole dark theater finally, entirely hers. She thought about the first time she’d ever touched a piano — six years old, standing on a stool because her feet didn’t reach the pedals, someone’s hand guiding hers to middle C. Nobody had told her yet that she’d spend the rest of her life chasing that same feeling. She just remembered thinking the sound was too big for the room, and wanting to make it bigger anyway.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ////// SPOTLIGHT ////// -->
+        <section class="spotlight">
+            <!-- Background photo (Figma: DSC_0948, flipped horizontally) -->
+            <img class="spotlight-bg" src="#" alt="">
+
+            <p class="spotlight-quote">(“)<br>The spotlight carved a private sanctuary from the dark, isolating her in a universe that felt infinite yet intimate”</p>
+
+            <div class="read-more-list">
+                <a class="read-more" href="#">Read More <img src="#" alt=""></a>
+                <a class="read-more" href="#">Read More <img src="#" alt=""></a>
+                <a class="read-more" href="#">Read More <img src="#" alt=""></a>
+            </div>
+
+            <img class="photo photo-circle-lights" src="#" alt="">
+            <img class="photo photo-night-light" src="#" alt="">
+            <img class="photo photo-11" src="#" alt="">
+        </section>
+    </main>
+
+</div>
+</body>
+</html>

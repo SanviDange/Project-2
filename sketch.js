@@ -3,18 +3,19 @@ var blob;
 var blobs = []; 
 
 function setup() {
-  createCanvas (windowWidth, document.documentElement.scrollHeight);
+  createCanvas (windowWidth, windowHeight);
 
   noCursor();
   
   blob = new Blob(width/2, height/2, 64);
-  for (var i = 0; i < 30; i++)  {
+  for (var i = 0; i < 10; i++)  {
     blobs [i] = new Blob (random(width), random(height), (16));
   }
 }
 
 function draw() {
-  background(0);
+  // Transparent instead of black so images/videos beneath the canvas show through
+  clear();
 
   // Make the big blob follow the mouse
   blob.pos.x = mouseX;
