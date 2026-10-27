@@ -383,9 +383,13 @@ text-align: center;
             text-decoration: none;
         }
 
-        .read-more img {
-            width: 1.25vw;
-            height: 1.172vw;
+        .read-more-arrow {
+            font-style: normal;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover .read-more-arrow {
+            transform: translateX(0.5vw);
         }
 
         .photo {

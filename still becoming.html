@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Still Awake</title>
-    <link rel="stylesheet" href="/still becoming.css">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="still becoming.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js" defer></script>
-    <script src="/p5.js" defer></script>
-    <script src="/script.js" defer></script>
-    <script src="/sketch.js" defer></script>
+    <script src="p5.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="sketch.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/gwg5trg.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,15 +66,15 @@
 
             <!-- Horse cutouts: connect images + motion here -->
             <div class="horses">
-                <div class="horse horse-walk"><video controls poster="thumbnail.jpg" autoplay muted loop>
+                <div class="horse horse-walk"><video playsinline autoplay muted loop>
                 <source src="video/Frame 34.mp4" type="video/mp4">Your browser does not support the video tag.</video>
                 </div>
 
-                <div class="horse horse-trot"><video controls poster="thumbnail.jpg" autoplay muted loop>
+                <div class="horse horse-trot"><video playsinline autoplay muted loop>
                 <source src="video/Frame 35.mp4" type="video/mp4">Your browser does not support the video tag.</video>
                 </div>
 
-                <div class="horse horse-run"><video controls poster="thumbnail.jpg" autoplay muted loop>
+                <div class="horse horse-run"><video playsinline autoplay muted loop>
                 <source src="video/Frame 36.mp4" type="video/mp4">Your browser does not support the video tag.</video>
                 </div>
             </div>
@@ -85,12 +85,24 @@
             <div class="divider divider-top"></div>
 
             <!-- Clocks: connect clock face + minute-hand motion here -->
-            <div class="clock clock-1"><img src="#" alt=""></div>
-            <div class="clock clock-2"><img src="#" alt=""></div>
-            <div class="clock clock-3"><img src="#" alt=""></div>
-            <div class="clock clock-4"><img src="#" alt=""></div>
-            <div class="clock clock-5"><img src="#" alt=""></div>
-            <div class="clock clock-6"><img src="#" alt=""></div>
+            <div class="clock clock-1"><video playsinline autoplay muted loop>
+                <source src="video/Clock — seamless clockwise motion (1).mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+            <div class="clock clock-2"><video playsinline autoplay muted loop>
+                <source src="video/Clock — seamless clockwise motion (2).mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+            <div class="clock clock-3"><video playsinline autoplay muted loop>
+                <source src="video/Clock — seamless clockwise motion.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+            <div class="clock clock-4"><video playsinline autoplay muted loop>
+                <source src="video/Clock — seamless clockwise motion (1).mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+            <div class="clock clock-5"><video playsinline autoplay muted loop>
+                <source src="video/Clock — seamless clockwise motion (2).mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+            <div class="clock clock-6"><video playsinline autoplay muted loop>
+                <source src="video/Clock — seamless clockwise motion.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
 
             <p class="clocks-quote">“I like the late hours,<br>that’s when the world lets you work”</p>
 
@@ -139,9 +151,9 @@
             <p class="spotlight-quote">(“)<br>The spotlight carved a private sanctuary from the dark, isolating her in a universe that felt infinite yet intimate”</p>
 
             <div class="read-more-list">
-                <a class="read-more" href="#">Read More <img src="#" alt=""></a>
-                <a class="read-more" href="#">Read More <img src="#" alt=""></a>
-                <a class="read-more" href="#">Read More <img src="#" alt=""></a>
+                <a class="read-more" href="#">Read More <span class="read-more-arrow" aria-hidden="true">→</span></a>
+                <a class="read-more" href="#">Read More <span class="read-more-arrow" aria-hidden="true">→</span></a>
+                <a class="read-more" href="#">Read More <span class="read-more-arrow" aria-hidden="true">→</span></a>
             </div>
 
             <img class="photo photo-circle-lights" src="/figma_images/night light 1.png" alt="">
