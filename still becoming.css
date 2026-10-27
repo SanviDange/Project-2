@@ -234,12 +234,13 @@ text-align: center;
 
         .clock {
             position: absolute;
-            width: 41.875vw;
-            height: 42.734vw;
+            width: 28vw;
+            height: 28vw;
             overflow: hidden;
         }
 
-        .clock img {
+        .clock img,
+        .clock video {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -247,13 +248,19 @@ text-align: center;
             object-fit: cover;
         }
 
-        /* Positions taken from the Figma frame, relative to this section */
-        .clock-1 { left: 55.078vw; top: 0; }
-        .clock-2 { left: 0.469vw;   top: 9.141vw; }
-        .clock-3 { left: 46.641vw; top: 22.031vw; }
-        .clock-4 { left: 18.672vw; top: 30.547vw; }
-        .clock-5 { left: -4.453vw; top: 46.406vw; }
-        .clock-6 { left: 61.641vw; top: 49.141vw; }
+        /* The clock face only fills the middle of each video: zoom in so it fills the box */
+        .clock video {
+            transform: scale(1.8);
+        }
+
+        /* Three columns, each starting at a different height so the layout
+           feels scattered, but every gap (across and down) is the same 4vw */
+        .clock-1 { left: 4vw;  top: 14vw; }
+        .clock-2 { left: 4vw;  top: 46vw; }
+        .clock-3 { left: 36vw; top: 9vw; }
+        .clock-4 { left: 36vw; top: 41vw; }
+        .clock-5 { left: 68vw; top: 21vw; }
+        .clock-6 { left: 68vw; top: 53vw; }
 
         .clocks-quote {
             position: absolute;
@@ -266,7 +273,14 @@ text-align: center;
             font-size: 10.156vw;
             line-height: 1.05;
             text-align: center;
+            color: #000;
             z-index: 2;
+        }
+
+        /* Light mode: the quote turns white, with a soft dark glow so it stays readable where it crosses the white gaps */
+        html.light-mode .clocks-quote {
+            color: #fff;
+            text-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.7);
         }
 
         .divider {
@@ -337,8 +351,9 @@ text-align: center;
 
         .spotlight {
             position: relative;
-            height: 125.234vw;
-            margin-top: 4.688vw;
+            height: 125.625vw;
+            /* Pulled up so the photo + quote tuck under the two shorter story columns */
+            margin-top: -18vw;
         }
 
         .spotlight-bg {
@@ -360,6 +375,13 @@ text-align: center;
             font-style: italic;
             font-size: 3.906vw;
             line-height: 1.05;
+            color: #000;
+        }
+
+        /* Light mode: same rule as the clocks quote, white with a soft dark glow */
+        html.light-mode .spotlight-quote {
+            color: #fff;
+            text-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.7);
         }
 
         .read-more-list {
@@ -397,7 +419,17 @@ text-align: center;
             object-fit: cover;
         }
 
-        .photo-circle-lights { left: 5.156vw;  top: 80.938vw; width: 29.609vw; height: 44.297vw; }
-        .photo-night-light   { left: 34.766vw; top: 83.047vw; width: 28.125vw; height: 42.188vw; }
-        .photo-11            { left: 66.484vw; top: 80.547vw; width: 29.766vw; height: 44.688vw; }
+        /* Three equal photos in a row: same size, same top, 3.516vw gaps,
+           spanning the same 88.281vw width as the story columns above */
+        .photo-circle-lights,
+        .photo-night-light,
+        .photo-11 {
+            top: 85vw;
+            width: 27.083vw;
+            height: 40.625vw;
+        }
+
+        .photo-circle-lights { left: 5.859vw; }
+        .photo-night-light   { left: 36.458vw; }
+        .photo-11            { left: 67.057vw; }
 

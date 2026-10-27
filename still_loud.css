@@ -144,33 +144,36 @@ text-align: center;
 }
 
 
-/* ////// COLLAGE: twelve overlapping photos ////// */
+/* ////// COLLAGE: twelve photos tiled with no gaps ////// */
 
+/* 8 columns × 5 rows across the full width; each cell is 3:4 like the photo */
 .collage {
-  position: relative;
-  height: 85vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 16.667vw);
   margin-top: 3.906vw;
 }
 
 .collage-photo {
-  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Positions taken from the Figma frame, relative to this section.
-   Later photos sit on top of earlier ones, as in Figma. */
-.collage-1  { left: 0.469vw;   top: 0;        width: 19.688vw; height: 26.25vw; }
-.collage-2  { left: 78.359vw;  top: 47.891vw; width: 24.531vw; height: 32.734vw; }
-.collage-3  { left: 52.813vw;  top: 47.891vw; width: 24.531vw; height: 32.734vw; }
-.collage-4  { left: 17.266vw;  top: 22.188vw; width: 35.938vw; height: 47.891vw; }
-.collage-5  { left: 20.156vw;  top: 0;        width: 13.984vw; height: 18.672vw; }
-.collage-6  { left: 34.141vw;  top: 0;        width: 13.984vw; height: 18.672vw; }
-.collage-7  { left: 48.125vw;  top: 0;        width: 13.984vw; height: 18.672vw; }
-.collage-8  { left: 62.109vw;  top: 0;        width: 13.984vw; height: 18.672vw; }
-.collage-9  { left: 53.203vw;  top: 20.391vw; width: 19.297vw; height: 25.703vw; }
-.collage-10 { left: 73.984vw;  top: 0;        width: 35.938vw; height: 47.891vw; }
-.collage-11 { left: -7.656vw;  top: 26.25vw;  width: 21.875vw; height: 29.141vw; }
-.collage-12 { left: -7.656vw;  top: 55.859vw; width: 21.875vw; height: 29.141vw; }
+/* grid-area: row-start / column-start / row-end / column-end */
+.collage-1  { grid-area: 1 / 1 / 3 / 3; } /* 2×2 top left */
+.collage-5  { grid-area: 1 / 3 / 2 / 4; } /* four small tiles along the top */
+.collage-6  { grid-area: 1 / 4 / 2 / 5; }
+.collage-7  { grid-area: 1 / 5 / 2 / 6; }
+.collage-8  { grid-area: 1 / 6 / 2 / 7; }
+.collage-10 { grid-area: 1 / 7 / 3 / 9; } /* 2×2 top right */
+.collage-4  { grid-area: 2 / 3 / 5 / 6; } /* 3×3 centre */
+.collage-9  { grid-area: 2 / 6 / 3 / 7; }
+.collage-11 { grid-area: 3 / 1 / 5 / 3; } /* 2×2 left */
+.collage-2  { grid-area: 3 / 6 / 6 / 9; } /* 3×3 bottom right */
+.collage-12 { grid-area: 5 / 1 / 6 / 3; } /* wide strip bottom left */
+.collage-3  { grid-area: 5 / 3 / 6 / 6; } /* wide strip bottom centre */
 
 /* FLICKERING COLLAGE: each photo stutters like a failing neon sign.
    Different lengths + delays keep the photos out of sync. */
@@ -226,6 +229,11 @@ text-align: center;
     .collage-photo {
         animation: none;
     }
+}
+
+/* Light mode: the collage holds still */
+html.light-mode .collage-photo {
+    animation: none;
 }
 
 
