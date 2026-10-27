@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still Loud</title>
+    <link rel="stylesheet" href="still_loud.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js" defer></script>
+    <script src="p5.js" defer></script>
+    <script src="still_loud.js" defer></script>
+    <script src="sketch.js" defer></script>
+    <link rel="stylesheet" href="https://use.typekit.net/gwg5trg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="splash" id="splashScreen">
+        <p id="demo"></p>
+        <h4 style="font-family: var(--display-font); font-size: 30px;">because some dreams come alive</h4>
+    </div>
+
+    <div id="sketch"></div>
+
+
+<header>
+    <div class="site-logo">
+        <div class="becoming-logo">
+            <h2 class="still" style="font-family: var(--primary-font); margin-bottom: -10px; margin-left: 50px;">STILL</h2>
+            <h2 class="still still-loud" style="font-family: var(--display-font); font-size: 50px; margin-top: -28px;">Loud</h2>
+        </div>
+
+    <div class="becoming-light"></div>
+    </div>
+</header>
+
+<main>
+    <!-- ////// COLLAGE: twelve overlapping photos (Figma: IMG_2591 7–18) ////// -->
+    <section class="collage">
+        <img class="collage-photo collage-1" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-2" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-3" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-4" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-5" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-6" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-7" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-8" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-9" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-10" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-11" src="images/IMG_2591.jpeg" alt="">
+        <img class="collage-photo collage-12" src="images/IMG_2591.jpeg" alt="">
+    </section>
+
+    <!-- ////// TITLE FAN: three Minton's Playhouse titles ////// -->
+    <section class="title-fan" id="titleFan">
+        <h1 class="fan-title fan-left" aria-hidden="true">MINTON’S PLAYHOUSE</h1>
+        <h1 class="fan-title fan-center">MINTON’S PLAYHOUSE</h1>
+        <h1 class="fan-title fan-right" aria-hidden="true">MINTON’S PLAYHOUSE</h1>
+    </section>
+
+    <!-- ////// STORY ////// -->
+    <section class="story">
+        <div class="meta">
+            <div class="meta-col">
+                <p>Title: Minton’s Playhouse</p>
+                <p>Author: Harlem Stop</p>
+            </div>
+            <div class="meta-col">
+                <p>Publication Year: 2025</p>
+                <p>Genre: Excerpt</p>
+            </div>
+        </div>
+
+        <div class="story-text">
+            <div class="story-intro">
+                <p>Established in 1938 by saxophonist Henry Minton, Minton's Playhouse stands as a pivotal shrine in the history of jazz, renowned as the birthplace of Bebop.</p>
+                <p>Minton's Playhouse continues to host exceptional musicians, delivering outstanding performances in a one-of-a-kind setting. Known for its commitment to high-quality of music, service, decadent drinks, and exceptional cuisine, Minton's remains an iconic and vibrant establishment in the world of jazz &amp; NYC.</p>
+            </div>
+
+            <div class="story-excerpt">
+                <p>She stepped into the light and sat down at the bench. When her hands finally touched the ivory, the exhaustion that had sat on her shoulders all day let go, all at once, like something had finally been given permission to leave. In its place came something else — restless, hungry, wide awake. She didn’t need anyone in those seats to make this worth doing. The silence of an empty theater at three in the morning was the only kind of listening she’d ever fully trusted.</p>
+                <p>Her hands found the first chord before she’d even decided to play it. The sound filled the dark room and came back to her off the balconies, off the velvet, off walls that hadn’t heard music in hours — and for the first time all day, nobody was waiting for her to be anything other than exactly this.</p>
+                <p>She played without thinking about what came next, just letting her hands move where they wanted. A scale that bent into something else. A chord held too long, then let go. Nobody was grading this.</p>
+            </div>
+        </div>
+
+        <!-- ////// READ MORE ////// -->
+        <div class="read-more-list">
+            <a class="read-more" href="#">Read More <svg class="read-more-arrow" viewBox="0 0 17.684 17.0197" aria-hidden="true"><path d="M0.683941 0.729537L0 1.45907L16 16.4591L16.6839 15.7295L17.3679 15L1.36788 0L0.683941 0.729537ZM16.7162 16.729C17.2682 16.7112 17.7012 16.2493 17.6834 15.6973L17.3932 6.70197C17.3754 6.14998 16.9135 5.71693 16.3615 5.73474C15.8095 5.75254 15.3765 6.21446 15.3943 6.76646L15.6522 14.7623L7.65638 15.0202C7.10438 15.038 6.67133 15.5 6.68914 16.0519C6.70695 16.6039 7.16886 17.037 7.72086 17.0192L16.7162 16.729Z"/></svg></a>
+            <a class="read-more" href="#">Read More <svg class="read-more-arrow" viewBox="0 0 17.684 17.0197" aria-hidden="true"><path d="M0.683941 0.729537L0 1.45907L16 16.4591L16.6839 15.7295L17.3679 15L1.36788 0L0.683941 0.729537ZM16.7162 16.729C17.2682 16.7112 17.7012 16.2493 17.6834 15.6973L17.3932 6.70197C17.3754 6.14998 16.9135 5.71693 16.3615 5.73474C15.8095 5.75254 15.3765 6.21446 15.3943 6.76646L15.6522 14.7623L7.65638 15.0202C7.10438 15.038 6.67133 15.5 6.68914 16.0519C6.70695 16.6039 7.16886 17.037 7.72086 17.0192L16.7162 16.729Z"/></svg></a>
+            <a class="read-more" href="#">Read More <svg class="read-more-arrow" viewBox="0 0 17.684 17.0197" aria-hidden="true"><path d="M0.683941 0.729537L0 1.45907L16 16.4591L16.6839 15.7295L17.3679 15L1.36788 0L0.683941 0.729537ZM16.7162 16.729C17.2682 16.7112 17.7012 16.2493 17.6834 15.6973L17.3932 6.70197C17.3754 6.14998 16.9135 5.71693 16.3615 5.73474C15.8095 5.75254 15.3765 6.21446 15.3943 6.76646L15.6522 14.7623L7.65638 15.0202C7.10438 15.038 6.67133 15.5 6.68914 16.0519C6.70695 16.6039 7.16886 17.037 7.72086 17.0192L16.7162 16.729Z"/></svg></a>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
