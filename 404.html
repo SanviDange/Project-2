@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js" defer></script>
+    <script src="p5.js" defer></script>
+    <script src="sketch_404.js" defer></script>
+    <style>
+        /* Centred over the blobs; clicks and the mouse pass straight through */
+        .not-found {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: var(--display-font);
+            font-style: italic;
+            font-size: 7.813vw;
+            font-weight: 400;
+            color: #000;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="not-found">!*?404!*?</h1>
+    <h4 class="not-found" style="margin-top: 200px; font-size: 80px;">?still awake?</h4>
+    <div id="sketch"></div>
+</body>
+</html>
