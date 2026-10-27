@@ -43,7 +43,7 @@ html body {
   width: 100%;
   max-width: 100vw;
   overflow-x: clip;
-  padding-bottom: 30.3vw;
+  padding-bottom: 10vw;
 }
 
 /* No cursor anywhere on the page; the glowing blob replaces it */
@@ -156,7 +156,7 @@ color: var(--colour);
   align-items: center;
   gap: 3.516vw;
   width: 89.063vw;
-  margin: 8.984vw 0 0 6.797vw;
+  margin: 3.906vw 0 0 6.797vw;
 }
 
 .photo-frame {
@@ -181,7 +181,7 @@ color: var(--colour);
 
 .loud-quote {
   width: 75.234vw;
-  margin: 5vw 0 0 13.75vw;
+  margin: 3.125vw 0 0 13.75vw;
   font-family: var(--display-font);
   font-style: italic;
   font-size: 6.25vw;
@@ -197,13 +197,12 @@ color: var(--colour);
   flex-direction: column;
   align-items: center;
   width: 88.281vw;
-  margin: 18.594vw auto 0;
+  margin: 7.813vw auto 0;
 }
 
 .story-title {
   width: 86.328vw;
-  min-height: 22.266vw;
-  margin: 0;
+  margin: 0 0 3.125vw;
   font-family: var(--heading-font);
   font-size: 7.813vw;
   line-height: 1.05;

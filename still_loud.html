@@ -10,6 +10,7 @@
     <script src="p5.js" defer></script>
     <script src="still_loud.js" defer></script>
     <script src="sketch.js" defer></script>
+    <script src="light_mode.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/gwg5trg.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,7 @@
 
     <div class="splash" id="splashScreen">
         <p id="demo"></p>
-        <h4 style="font-family: var(--display-font); font-size: 30px;">because some dreams come alive</h4>
+        <h4 style="font-family: var(--display-font); font-size: 30px;">because quiet was never the plan</h4>
     </div>
 
     <div id="sketch"></div>
@@ -33,7 +34,7 @@
             <h2 class="still still-loud" style="font-family: var(--display-font); font-size: 50px; margin-top: -28px;">Loud</h2>
         </div>
 
-    <div class="becoming-light"></div>
+    <button class="becoming-light" type="button" aria-label="Switch to light mode" aria-pressed="false"></button>
     </div>
 </header>
 

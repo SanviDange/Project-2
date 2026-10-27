@@ -42,7 +42,7 @@ html body {
   width: 100%;
   max-width: 100vw;
   overflow-x: clip;
-  padding-bottom: 20vw;
+  padding-bottom: 10vw;
 }
 
 /* No cursor anywhere on the page; the glowing blob replaces it */
@@ -149,7 +149,7 @@ text-align: center;
 .collage {
   position: relative;
   height: 85vw;
-  margin-top: 9.453vw;
+  margin-top: 3.906vw;
 }
 
 .collage-photo {
@@ -235,7 +235,7 @@ text-align: center;
 .title-fan {
   position: relative;
   height: 21.172vw;
-  margin-top: 7.578vw;
+  margin-top: 4.688vw;
 }
 
 /* --tilt is set by still_loud.js as the section scrolls in (0 → 1) */
@@ -291,7 +291,7 @@ text-align: center;
 
 .story-text {
   width: 51.797vw;
-  margin-top: 4.766vw;
+  margin-top: 3.125vw;
   font-family: var(--primary-font);
   font-size: 1.563vw;
   line-height: 1.05;
@@ -303,7 +303,7 @@ text-align: center;
 }
 
 .story-intro {
-  margin-bottom: 3.125vw;
+  margin-bottom: 1.641vw;
 }
 
 .story-excerpt p + p {

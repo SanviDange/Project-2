@@ -30,6 +30,13 @@ canvas {
   z-index: -1;
 }
 
+/* No cursor anywhere on the page; the glowing blob replaces it */
+html,
+body,
+body * {
+  cursor: none !important;
+}
+
 
 h1, h2, h3, h4 {
     font-family: var(--display-font);
@@ -263,4 +270,60 @@ a {
         opacity: 0.2;
         filter: brightness(1.5);
     }
+}
+
+/*///////////// LIGHT MODE TOGGLE ////////////*/
+
+/* The flickering dot is a button: strip the browser's button look */
+.becoming-light {
+    border: none;
+    padding: 0;
+}
+
+/* Swap the page colours: white background, black lines/accents */
+:root.light-mode {
+    --primary-colour: #f9f9f9;
+    --secondary-colour: #000000;
+}
+
+html.light-mode .splash {
+    background-color: var(--primary-colour);
+}
+
+/* Blobs disappear (light_mode.js also pauses the sketch) */
+html.light-mode canvas {
+    display: none;
+}
+
+/* With no blob to follow, bring the normal cursor back */
+html.light-mode,
+html.light-mode body,
+html.light-mode body * {
+    cursor: auto !important;
+}
+
+html.light-mode .becoming-light,
+html.light-mode a {
+    cursor: pointer !important;
+}
+
+/* The dot turns black so it can still be seen and clicked to go back */
+html.light-mode .becoming-light {
+    background: #000;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Photos + videos go black and white on the white background */
+main img,
+main video,
+.collage {
+    transition: filter 0.4s ease;
+}
+
+html.light-mode main img,
+html.light-mode main video,
+html.light-mode .collage { /* the collage's flicker animates filter on each photo, so grey the whole group */
+    filter: grayscale(1);
 }
